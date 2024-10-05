@@ -1,42 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
-    <!--PWA requirements-->
-    <meta name="theme-color" content="#9480FF" />
-    <link
-      rel="apple-touch-icon"
-      href="https://cdn.glitch.me/efc5414a-882b-4708-af81-8461abbc1a82%2Ftouch-icon.png?v=1633521972305"
-    />
-
-    <!-- PWA setup - update public/sw.js if you add your own assets like a new .css file -->
-    <link rel="manifest" href="manifest.json" />
-    <script>
-      if (location.protocol == "http:") location.protocol = "https:";
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("sw.js")
-          .then((reg) => console.log("Service Worker registered", reg))
-          .catch((err) =>
-            console.error("Service Worker **not** registered", err)
-          );
-      } else {
-        console.warn("Service Worker not supported in this browser");
-      }
-    </script>
-    <script type="module" src="scripts/render.js"></script>
-    <!-- templates/head.js will fill in here -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mi Linktree</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <div class="wrapper">
-        <div id="content" class="content">
-          <!-- scripts/render.js determines what fills in here -->
-        </div>
+    <div class="container">
+      <header>
+        <img
+          src="https://avatars.githubusercontent.com/u/180382663?s=400&u=972d51455ea66a2ce59b94761321583a2828cd6b&v=4"
+          alt="Avatar"
+          class="avatar"
+        />
+        <h1>Económica Perú</h1>
+        <p class="bio">Una breve descripción sobre ti</p>
+      </header>
+
+      <div class="links">
+        <a href="https://www.tuenlace1.com" target="_blank">Enlace 1</a>
+        <a href="https://www.tuenlace2.com" target="_blank">Enlace 2</a>
+        <a href="https://www.tuenlace3.com" target="_blank">Enlace 3</a>
+        <!-- Agrega más enlaces según necesites -->
       </div>
-    </main>
+    </div>
   </body>
 </html>
